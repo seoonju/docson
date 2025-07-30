@@ -74,7 +74,7 @@ import docson from './index';
                         }
                         window.addEventListener("message", receiveMessage, false);
                         var host = window.opener || window.parent;
-                        host.postMessage( { id: "docson", action: "ready", url: url}, "*");
+                        host.postMessage( { id: "docson", action: "ready", url: url}, "https://trusted-origin.com"); // Specify the trusted origin
                     } else {
                         $("#doc").empty();
                         $("#form").show();
