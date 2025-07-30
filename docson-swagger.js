@@ -31,7 +31,7 @@ function createDoc(definitions, type) {
                     frame.parents("td").width(event.data.width + 24)
                 }
                 if (event.data.action == "ready") {
-                    frame.get(0).contentWindow.postMessage({ id: "docson", action: "load", definitions: allDefinitions, type: event.data.url.split("$")[1]}, "*");
+                    frame.get(0).contentWindow.postMessage({ id: "docson", action: "load", definitions: allDefinitions, type: event.data.url.split("$")[1]}, docson);
                 }
             }
         }

@@ -422,7 +422,7 @@ define(["lib/jquery", "lib/handlebars", "lib/highlight", "lib/jsonpointer", "lib
                                 var w;
                                 function receiveMessage(event) {
                                    if (event.data.id && event.data.id == "docson" && event.data.action == "ready") {
-                                       w.postMessage({ id: "docson", action: "load", definitions: schema, type: event.data.url.split("$")[1], expand: true}, "*");
+                                       w.postMessage({ id: "docson", action: "load", definitions: schema, type: event.data.url.split("$")[1], expand: true}, url);
                                    }
                                 }
                                 window.addEventListener("message", receiveMessage, false);
